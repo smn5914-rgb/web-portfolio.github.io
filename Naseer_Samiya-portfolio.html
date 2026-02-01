@@ -1,0 +1,322 @@
+<!-- Samiya Naseer, IST 256, ASG-L1: HTML5 Portfolio Page Assignment, January 25, 2026 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO Meta -->
+    <title>Samiya Naseer | Cybersecurity Student Portfolio Profile</title>
+    <meta
+      name="description"
+      content="Personal portfolio profile for Samiya Naseer, a cybersecurity student showcasing skills, projects, experience, and contact information using semantic HTML5."
+    />
+    <meta name="author" content="Samiya Naseer" />
+    <meta
+      name="keywords"
+      content="Samiya Naseer, portfolio, cybersecurity, student, HTML5, projects, skills, profile"
+    />
+
+    <!-- External CSS (PRIMARY stylesheet) -->
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <style>
+      /* Internal CSS: page-specific override for this single page.
+         Kept internal to demonstrate internal CSS usage (small customization
+         that is not reused across other pages). */
+      #projects figure {
+        margin-top: 1.25rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header id="top" class="site-header">
+      <div class="container">
+        <div class="header-grid">
+          <figure class="profile">
+            <img
+              class="profile__photo"
+              src="IMG_5040.jpg"
+              alt="Portrait of Samiya Naseer smiling in professional attire"
+              width="180"
+              height="180"
+            />
+            <figcaption class="profile__caption">
+              <strong>Cybersecurity student</strong> exploring <em>cyber law</em> and secure systems.
+            </figcaption>
+          </figure>
+
+          <div class="intro">
+            <h1 class="intro__title">Samiya Naseer</h1>
+            <p class="muted intro__subtitle">
+              Building a foundation in cybersecurity, accessibility, and web fundamentals.
+            </p>
+            <p class="intro__tagline">
+              <strong>Tagline:</strong>
+              I'm someone who likes to learn the ins and outs of things, not just the surface.
+            </p>
+            <p class="muted intro__updated">
+              Last updated: <time datetime="2026-01-25">January 25, 2026</time>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary">
+      <div class="container">
+        <ul class="nav-list">
+          <li class="nav-list__item"><a class="nav-list__link" href="#about">About</a></li>
+          <li class="nav-list__item"><a class="nav-list__link" href="#skills">Skills</a></li>
+          <li class="nav-list__item"><a class="nav-list__link" href="#projects">Projects</a></li>
+          <li class="nav-list__item"><a class="nav-list__link" href="#education">Education</a></li>
+          <li class="nav-list__item"><a class="nav-list__link" href="#contact">Contact</a></li>
+        </ul>
+
+        <p class="muted">
+          External profile (placeholder):
+          <a
+            class="external-link"
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </p>
+      </div>
+    </nav>
+
+    <main id="main-content" class="container layout">
+      <div class="layout__main">
+        <section id="about" class="card" aria-labelledby="about-title">
+          <h2 id="about-title" class="card__title">About</h2>
+          <p>
+            I’m a cybersecurity student interested in secure systems and accessibility. I enjoy building
+            clean, semantic web pages and learning tools that help me understand how technology works.
+          </p>
+          <p class="muted">
+            Current focus: improving my R skills for data analysis and strengthening my web fundamentals.
+          </p>
+        </section>
+
+        <section id="skills" class="card" aria-labelledby="skills-title">
+          <h2 id="skills-title" class="card__title">Skills</h2>
+
+          <ul class="skill-list">
+            <li class="skill-list__item">
+              <span class="skill-list__label">HTML / Semantic Structure</span>
+              <!-- Inline style used for a one-time “progress” width value (demonstrates inline CSS). -->
+              <span class="progress" aria-label="HTML proficiency">
+                <span class="progress__fill" style="width: 78%;"></span>
+              </span>
+            </li>
+
+            <li class="skill-list__item">
+              <span class="skill-list__label">CSS / Layout Basics</span>
+              <!-- Inline style used for a one-time “progress” width value (demonstrates inline CSS). -->
+              <span class="progress" aria-label="CSS proficiency">
+                <span class="progress__fill" style="width: 68%;"></span>
+              </span>
+            </li>
+
+            <li class="skill-list__item">
+              <span class="skill-list__label">Tools</span>
+              <span class="muted">Wireshark, Visual Studio Code, SQL, IntelliJ</span>
+            </li>
+          </ul>
+        </section>
+
+        <section id="projects" class="card" aria-labelledby="projects-title">
+          <h2 id="projects-title" class="card__title">Projects</h2>
+
+          <article class="project">
+            <h3 class="project__title">Network Topology Diagram</h3>
+            <p class="muted project__desc">
+              A simple diagram that helped me visualize how devices connect and communicate.
+            </p>
+
+            <figure class="project__figure">
+              <img
+                class="project__img"
+                src="topology.png"
+                alt="A basic network topology diagram showing connected devices"
+              />
+              <figcaption class="muted">
+                Example topology diagram (image file: topology.png).
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">Portfolio Website</h3>
+            <p class="project__desc">
+              A semantic HTML portfolio page enhanced with CSS to improve layout, responsiveness,
+              and accessibility.
+            </p>
+          </article>
+        </section>
+
+        <section id="education" class="card" aria-labelledby="education-title">
+          <h2 id="education-title" class="card__title">Education</h2>
+          <p><strong>Penn State University</strong> — Cybersecurity (Student)</p>
+
+          <table class="data-table">
+            <caption>Relevant Coursework (Sample Table)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Topic</th>
+                <th scope="col">Why it matters</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SRA / Security</td>
+                <td>Risk + threat concepts</td>
+                <td>Helps understand security decision-making</td>
+              </tr>
+              <tr>
+                <td>Web</td>
+                <td>HTML + CSS</td>
+                <td>Builds professional web foundations</td>
+              </tr>
+              <tr>
+                <td>Data</td>
+                <td>R + statistics</td>
+                <td>Supports data-driven conclusions</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="contact" class="card" aria-labelledby="contact-title">
+          <h2 id="contact-title" class="card__title">Contact</h2>
+
+          <p>
+            Email: <a href="mailto:samiyanaseer06@gmail.com">samiyanaseer06@gmail.com</a><br />
+            Phone: <a href="tel:+14848285001">+1 (484) 828-5001</a>
+          </p>
+
+          <p>
+            Download my resume:
+            <a href="Resume.pdf" download>Resume (PDF)</a>
+          </p>
+
+          <form class="contact-form" action="/submit" method="post" aria-label="Contact form">
+            <fieldset>
+              <legend>Send me a message</legend>
+
+              <p class="form-row">
+                <label for="full-name">Full Name:</label><br />
+                <input
+                  type="text"
+                  id="full-name"
+                  name="fullName"
+                  autocomplete="name"
+                  required
+                  minlength="2"
+                  placeholder="Your name"
+                />
+              </p>
+
+              <p class="form-row">
+                <label for="email">Email:</label><br />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </p>
+
+              <p class="form-row">
+                <label for="topic">Topic:</label><br />
+                <select id="topic" name="topic" required>
+                  <option value="" selected disabled>Choose one</option>
+                  <option value="portfolio">Portfolio</option>
+                  <option value="project">Project collaboration</option>
+                  <option value="feedback">Feedback</option>
+                </select>
+              </p>
+
+              <p class="form-row">
+                <label for="message">Message:</label><br />
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Write your message here..."
+                ></textarea>
+              </p>
+
+              <p class="form-row">
+                <label for="contact-date">Preferred contact date:</label><br />
+                <input type="date" id="contact-date" name="contactDate" />
+              </p>
+
+              <p class="form-row">
+                <label for="rating">How helpful is this page? (1–10)</label><br />
+                <input type="number" id="rating" name="rating" min="1" max="10" />
+              </p>
+
+              <button class="btn" type="submit">Send</button>
+            </fieldset>
+          </form>
+        </section>
+      </div>
+
+      <aside class="card layout__sidebar" aria-label="Sidebar with quick facts">
+        <h2 class="card__title">Quick Facts</h2>
+        <ul>
+          <li><strong>Focus:</strong> cybersecurity + web fundamentals</li>
+          <li><strong>Favorite tools:</strong> <code>Wireshark</code>, Visual Studio Code, SQL, IntelliJ</li>
+          <li><strong>Hobbies:</strong> learning new tech, reading, cars</li>
+        </ul>
+
+        <h3>Favorites</h3>
+        <dl>
+          <dt>Quote</dt>
+          <dd>
+            <q>
+              One apple drops and everyone knows the meaning of gravity, yet thousands of bodies fall and
+              no one knows the meaning of humanity.
+            </q>
+          </dd>
+
+          <dt>Resource</dt>
+          <dd>
+            <a
+              href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Accessibility Introduction (W3C WAI)
+            </a>
+          </dd>
+        </dl>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <time datetime="2026">2026</time> Samiya Naseer. All rights reserved.</p>
+
+        <p>
+          Contact:
+          <a href="mailto:samiyanaseer06@gmail.com">samiyanaseer06@gmail.com</a> |
+          <a href="tel:+14848285001">+1 (484) 828-5001</a>
+        </p>
+
+        <p class="muted">Last updated: <time datetime="2026-01-25">January 25, 2026</time></p>
+        <p><a href="#top">Back to top</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
