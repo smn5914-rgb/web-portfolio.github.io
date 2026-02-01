@@ -71,45 +71,20 @@ a:focus { outline: 3px solid rgba(31,111,235,0.35); outline-offset: 2px; }
 .skip-link:focus { left: 1rem; top: 1rem; }
 
 /* 2) DESIGN TOKENS */
-:root{
-  --color-bg: #f6f7fb;
-  --color-surface: #ffffff;
-  --color-text: #161616;
-  --color-muted: #545454;
-  --color-border: rgba(0,0,0,0.10);
-
-  --color-primary: #1f6feb;
-  --color-primary-dark: #184fb8;
-  --color-accent: #ffb020;
-
-  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-
-  --fs-sm: 0.95rem;
-  --fs-md: 1rem;
-  --fs-lg: 1.125rem;
-  --fs-xl: 1.5rem;
-  --fs-2xl: 2.1rem;
-
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-
-  --radius-sm: 12px;
-  --radius-md: 16px;
-  --radius-pill: 999px;
-
-  --shadow-1: 0 10px 28px rgba(0,0,0,0.08);
-  --shadow-2: 0 16px 40px rgba(0,0,0,0.12);
-
-  --t-fast: 150ms;
-  --t-med: 250ms;
-
-  --container: 1100px;
-}
+:root {
+    /* Sage green background palette */
+    --color-bg: #eef4ef;          /* light sage green */
+    --color-surface: #ffffff;     /* cards stay white */
+    --color-text: #1f2d24;        /* deep green-gray text */
+    --color-muted: #5f6f66;       /* muted sage text */
+    --color-border: rgba(31, 45, 36, 0.15);
+  
+    --color-primary: #7fae8a;     /* sage accent */
+    --color-primary-dark: #5f8f73;
+    --color-accent: #c9b458;      /* soft warm accent */
+  
+    /* keep everything else the same */
+  }
 
 /* 3) TYPOGRAPHY */
 h1, h2, h3 { line-height: 1.2; margin: 0 0 var(--space-3); }
