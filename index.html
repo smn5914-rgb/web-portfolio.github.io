@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Samiya Naseer | Portfolio</title>
+
+  <meta name="description" content="Portfolio website for Samiya Naseer, cybersecurity student." />
+  <meta name="author" content="Samiya Naseer" />
+
+  <!-- ✅ EXTERNAL CSS (PRIMARY STYLESHEET) -->
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- ✅ INTERNAL CSS (small page-specific override, REQUIRED by assignment) -->
+  <style>
+    /* Internal CSS: page-specific tweak to demonstrate internal styles */
+    #projects figure {
+      margin-top: 1.25rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="top">
+    <div class="container header-grid">
+      <figure>
+        <img
+          src="IMG_5040 copy.jpg"
+          alt="Portrait of Samiya Naseer"
+          width="180"
+          height="180"
+        />
+        <figcaption>
+          <strong>Cybersecurity student</strong> interested in secure systems and web fundamentals.
+        </figcaption>
+      </figure>
+
+      <div>
+        <h1>Samiya Naseer</h1>
+        <p class="muted">
+          Building skills in cybersecurity, data analysis, and accessible web design.
+        </p>
+        <p>
+          <strong>Tagline:</strong> I like learning the ins and outs of things, not just the surface.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Primary">
+    <div class="container">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container">
+    <div>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I am a cybersecurity student with an interest in understanding how systems work and how to
+          protect them. I enjoy learning through hands-on projects and coursework.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>
+            HTML / Semantic Structure
+            <!-- ✅ INLINE CSS (one-off dynamic value, REQUIRED) -->
+            <div class="progress">
+              <div class="progress__fill" style="width: 78%;"></div>
+            </div>
+          </li>
+          <li>
+            CSS / Layout Fundamentals
+            <div class="progress">
+              <div class="progress__fill" style="width: 68%;"></div>
+            </div>
+          </li>
+          <li>Tools: Visual Studio Code, SQL, IntelliJ, Wireshark</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <article>
+          <h3>Network Topology Diagram</h3>
+          <p>
+            A simple project used to visualize how devices connect within a network.
+          </p>
+          <figure>
+            <img src="topology copy.png" alt="Basic network topology diagram" />
+            <figcaption>Example topology diagram.</figcaption>
+          </figure>
+        </article>
+
+        <article>
+          <h3>Portfolio Website</h3>
+          <p>
+            A semantic HTML portfolio enhanced with CSS for layout, responsiveness, and accessibility.
+          </p>
+        </article>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p><strong>Penn State University</strong> — Cybersecurity (Student)</p>
+
+        <table>
+          <caption>Relevant Coursework</caption>
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Topic</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SRA</td>
+              <td>Risk Analysis</td>
+              <td>Understanding threats and vulnerabilities</td>
+            </tr>
+            <tr>
+              <td>Web</td>
+              <td>HTML & CSS</td>
+              <td>Building accessible web pages</td>
+            </tr>
+            <tr>
+              <td>Data</td>
+              <td>Statistics & R</td>
+              <td>Analyzing and interpreting data</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:samiyanaseer06@gmail.com">samiyanaseer06@gmail.com</a></p>
+        <p>Phone: <a href="tel:+14848285001">+1 (484) 828-5001</a></p>
+        <p><a href="Resume copy.pdf" download>Download Resume (PDF)</a></p>
+
+        <form>
+          <fieldset>
+            <legend>Send me a message</legend>
+
+            <label>
+              Name:
+              <input type="text" required />
+            </label>
+
+            <label>
+              Email:
+              <input type="email" required />
+            </label>
+
+            <label>
+              Message:
+              <textarea required></textarea>
+            </label>
+
+            <button type="submit">Send</button>
+          </fieldset>
+        </form>
+      </section>
+    </div>
+
+    <aside>
+      <h2>Quick Facts</h2>
+      <ul>
+        <li>Major: Cybersecurity</li>
+        <li>Interests: Security, data, web design</li>
+        <li>Tools: Wireshark, VS Code, SQL</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Samiya Naseer</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>
