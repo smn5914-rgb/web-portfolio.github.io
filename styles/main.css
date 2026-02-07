@@ -326,6 +326,11 @@ button:hover{
 }
 section, aside{ animation: fadeUp 420ms ease both; }
 
+/* Utility: hide elements via DOM */
+.is-hidden {
+  display: none;
+}
+
 /* 12) RESPONSIVE (3 breakpoints) */
 @media (max-width: 1200px){
   main.container{ grid-template-columns: 1.6fr 1fr; }
