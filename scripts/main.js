@@ -30,7 +30,14 @@ function setupSectionToggles() {
     });
 }
 
+//------Hover effects-------
+function setupProjectImageHover() {
+    const img = document.querySelector(".project-image");
+    if (!img) return;
 
+    img.addEventListener("mouseenter", () => img.classList.add("hovered"));
+    img.addEventListener("mouseleave", () => img.classList.remove("hovered"));
+}
 
 
 
