@@ -331,6 +331,12 @@ section, aside{ animation: fadeUp 420ms ease both; }
   display: none;
 }
 
+/* utility: hover effect via DOM */
+.is-hovered {
+  transform: scale(1.03);
+  transition: transform 150ms ease;
+}
+
 /* 12) RESPONSIVE (3 breakpoints) */
 @media (max-width: 1200px){
   main.container{ grid-template-columns: 1.6fr 1fr; }
