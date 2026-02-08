@@ -36,9 +36,15 @@ body {
   font-size: var(--fs-md);
   line-height: 1.6;
   color: var(--color-text);
-  background: radial-gradient(1200px 600px at 20% 0%, rgba(31,111,235,0.10), transparent 60%),
-              radial-gradient(900px 500px at 80% 10%, rgba(255,176,32,0.10), transparent 55%),
-              var(--color-bg);
+
+  /* Soft green gradient background (professional + subtle) */
+  background:
+    linear-gradient(
+      135deg,
+      #e7f1eb 0%,
+      #eef4ef 40%,
+      #f6faf7 100%
+    );
 }
 
 img, video {
@@ -48,12 +54,15 @@ img, video {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   text-decoration: none;
   text-underline-offset: 0.18em;
 }
 a:hover { text-decoration: underline; }
-a:focus { outline: 3px solid rgba(31,111,235,0.35); outline-offset: 2px; }
+a:focus {
+  outline: 3px solid rgba(111, 168, 139, 0.40);
+  outline-offset: 2px;
+}
 
 .muted { color: var(--color-muted); }
 
@@ -72,19 +81,51 @@ a:focus { outline: 3px solid rgba(31,111,235,0.35); outline-offset: 2px; }
 
 /* 2) DESIGN TOKENS */
 :root {
-    /* Sage green background palette */
-    --color-bg: #eef4ef;          /* light sage green */
-    --color-surface: #ffffff;     /* cards stay white */
-    --color-text: #1f2d24;        /* deep green-gray text */
-    --color-muted: #5f6f66;       /* muted sage text */
-    --color-border: rgba(31, 45, 36, 0.15);
-  
-    --color-primary: #7fae8a;     /* sage accent */
-    --color-primary-dark: #5f8f73;
-    --color-accent: #c9b458;      /* soft warm accent */
-  
-    /* keep everything else the same */
-  }
+  /* Layout */
+  --container: 1100px;
+
+  /* Fonts */
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Type scale */
+  --fs-sm: 0.95rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.15rem;
+  --fs-xl: 1.45rem;
+  --fs-2xl: 2.1rem;
+
+  /* Spacing */
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  /* Radii */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-1: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 14px 32px rgba(0, 0, 0, 0.10);
+
+  /* Transitions */
+  --t-fast: 140ms ease;
+  --t-med: 240ms ease;
+
+  /* Color palette (green vibe) */
+  --color-bg: #eef4ef;
+  --color-surface: #ffffff;
+  --color-text: #1e2f26;
+  --color-muted: #6b7f74;
+  --color-border: rgba(30, 47, 38, 0.14);
+
+  --color-primary: #6fa88b;
+  --color-primary-dark: #4f7f66;
+  --color-accent: #b9a94a;
+}
 
 /* 3) TYPOGRAPHY */
 h1, h2, h3 { line-height: 1.2; margin: 0 0 var(--space-3); }
@@ -112,7 +153,7 @@ aside > h2::after{
   margin-top: 0.5rem;
   border-radius: var(--radius-pill);
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* external link marker */
@@ -139,7 +180,7 @@ main.container > div{
 
 /* 5) HEADER */
 header#top{
-  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.75));
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.80));
   border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(8px);
 }
@@ -159,8 +200,8 @@ header figure{
 
 header figure img{
   border-radius: 50%;
-  box-shadow: var(--shadow-1);
-  border: 4px solid rgba(31,111,235,0.14);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  border: 4px solid rgba(111, 168, 139, 0.45);
 }
 
 header figcaption{
@@ -174,8 +215,8 @@ nav[aria-label="Primary"]{
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -198,7 +239,7 @@ nav > .container > ul a{
   padding: 0.55rem 0.85rem;
   border-radius: var(--radius-pill);
   border: 1px solid rgba(0,0,0,0.10);
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.72);
   color: var(--color-text);
   transition: transform var(--t-fast), box-shadow var(--t-fast), border-color var(--t-fast);
 }
@@ -206,13 +247,13 @@ nav > .container > ul a{
 nav > .container > ul a:hover{
   transform: translateY(-1px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  border-color: rgba(31,111,235,0.35);
+  border-color: var(--color-primary);
   text-decoration: none;
 }
 
 /* 7) SECTIONS / CARDS */
 section, aside{
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.96);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-6);
@@ -228,6 +269,22 @@ ul{ padding-left: 1.1rem; }
 li{ margin: 0.35rem 0; }
 
 h2 + p{ margin-top: 0; }
+
+/* Progress bars (polish) */
+.progress{
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 420px;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(30, 47, 38, 0.10);
+  overflow: hidden;
+}
+.progress__fill{
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary));
+}
 
 /* 8) PROJECTS / MEDIA */
 #projects img{
@@ -257,7 +314,7 @@ table{
 
 caption{
   text-align: left;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: var(--space-2);
 }
 
@@ -268,11 +325,11 @@ th, td{
 }
 
 thead th{
-  background: linear-gradient(180deg, rgba(31,111,235,0.12), rgba(31,111,235,0.06));
+  background: linear-gradient(180deg, rgba(111, 168, 139, 0.20), rgba(111, 168, 139, 0.10));
 }
 
 tbody tr:nth-child(odd){ background: rgba(0,0,0,0.02); }
-tbody tr:hover{ background: rgba(31,111,235,0.08); }
+tbody tr:hover{ background: rgba(111, 168, 139, 0.12); }
 
 /* 10) FORM */
 form fieldset{
@@ -283,10 +340,10 @@ form fieldset{
 
 legend{
   padding: 0 var(--space-2);
-  font-weight: 600;
+  font-weight: 700;
 }
 
-label{ font-weight: 600; }
+label{ font-weight: 700; }
 
 input, select, textarea, button{
   font: inherit;
@@ -301,22 +358,26 @@ textarea{ max-width: 700px; }
 ::placeholder{ color: #777; }
 
 input:focus, select:focus, textarea:focus{
-  outline: 3px solid rgba(31,111,235,0.35);
+  outline: 3px solid rgba(111, 168, 139, 0.40);
   outline-offset: 2px;
 }
 
 input:invalid, textarea:invalid{ border-color: rgba(207,34,46,0.55); }
 input:valid, textarea:valid{ border-color: rgba(45,164,78,0.55); }
 
+/* Buttons (more professional + cohesive) */
 button{
   cursor: pointer;
-  border: 1px solid rgba(0,0,0,0.18);
-  background: linear-gradient(180deg, #ffffff, #f1f1f1);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: linear-gradient(180deg, #ffffff, #edf3ee);
+  color: var(--color-text);
+  font-weight: 600;
   transition: transform var(--t-fast), box-shadow var(--t-fast);
 }
 button:hover{
   transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.10);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 /* 11) ANIMATIONS */
@@ -331,7 +392,7 @@ section, aside{ animation: fadeUp 420ms ease both; }
   display: none;
 }
 
-/* utility: hover effect via DOM */
+/* Utility: hover effect via DOM */
 .is-hovered {
   transform: scale(1.03);
   transition: transform 150ms ease;
