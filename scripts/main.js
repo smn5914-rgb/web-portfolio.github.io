@@ -63,6 +63,5 @@ document.addEventListener("DOMContentLoaded", () => {
       status.textContent = `Thanks, ${name}! Your message has been sent.`;
       status.style.color = "green";
       form.reset();
-    });
-  }
-});
+    }); 
+  } 
