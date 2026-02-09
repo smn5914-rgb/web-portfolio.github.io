@@ -7,6 +7,7 @@ Submission Date: 02/08/26
 Repo URL: https://smn5914-rgb.github.io/web-portfolio.github.io/
 */
 
+console.log("main.js loaded ✅");
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
