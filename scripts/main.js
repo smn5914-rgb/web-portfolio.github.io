@@ -16,25 +16,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // -------- Toggle sections --------
   const buttons = document.querySelectorAll(".toggle-btn");
-  console.log("toggle buttons found:", buttons.length);
+console.log("toggle buttons found:", buttons.length);
 
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const targetId = btn.dataset.target;
-      const section = document.getElementById(targetId);
-      if (!section) return;
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.dataset.target;
+    console.log("clicked:", targetId);
 
-      const content = section.querySelector(".section-content");
-      if (!content) return;
+    const section = document.getElementById(targetId);
+    console.log("section:", section);
 
-      content.classList.toggle("is-hidden");
+    const content = section ? section.querySelector(".section-content") : null;
+    console.log("content:", content);
 
-      const title = section.querySelector("h2")?.textContent || "Section";
-      btn.textContent = content.classList.contains("is-hidden")
-        ? `Show ${title}`
-        : `Hide ${title}`;
-    });
+    if (!content) return;
+
+    content.classList.toggle("is-hidden");
+    console.log("toggled is-hidden:", content.classList.contains("is-hidden"));
   });
+});
 
   // -------- Hover effect (project image) --------
   const projectImg = document.querySelector("#projects img");
