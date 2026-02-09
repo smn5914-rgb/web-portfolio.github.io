@@ -12,27 +12,22 @@ Repo URL: https://smn5914-rgb.github.io/web-portfolio.github.io/
 console.log("main.js loaded ✅");
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("main.js loaded ✅");
+  document.querySelectorAll(".toggle-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.dataset.target;
+      const section = document.getElementById(targetId);
+      if (!section) return;
 
-  // -------- Toggle sections --------
-  const buttons = document.querySelectorAll(".toggle-btn");
-console.log("toggle buttons found:", buttons.length);
+      const content = section.querySelector(".section-content");
+      if (!content) return;
 
-buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const targetId = btn.dataset.target;
-    console.log("clicked:", targetId);
+      content.classList.toggle("is-hidden");
 
-    const section = document.getElementById(targetId);
-    console.log("section:", section);
-
-    const content = section ? section.querySelector(".section-content") : null;
-    console.log("content:", content);
-
-    if (!content) return;
-
-    content.classList.toggle("is-hidden");
-    console.log("toggled is-hidden:", content.classList.contains("is-hidden"));
+      const title = section.querySelector("h2")?.textContent || "Section";
+      btn.textContent = content.classList.contains("is-hidden")
+        ? `Show ${title}`
+        : `Hide ${title}`;
+    });
   });
 });
 
