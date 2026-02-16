@@ -420,3 +420,21 @@ section, aside{ animation: fadeUp 420ms ease both; }
 @media (prefers-reduced-motion: reduce){
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* --- Custom Navbar Forest Green --- */
+.custom-navbar {
+  background-color: #1f4d3a; /* dark forest green */
+}
+
+.navbar .nav-link {
+  color: rgba(255,255,255,0.85);
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
