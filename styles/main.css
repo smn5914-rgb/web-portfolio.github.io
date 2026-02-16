@@ -422,7 +422,7 @@ section, aside{ animation: fadeUp 420ms ease both; }
 }
 
 /* --- Custom Navbar Forest Green --- */
-.custom-navbar {
+nav.custom-navbar {
   background-color: #1f4d3a; /* dark forest green */
 }
 
