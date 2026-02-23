@@ -29,7 +29,29 @@ document.addEventListener("DOMContentLoaded", () => {
         : `Hide ${title}`;
     });
   });
+
+  // -------- Theme toggle Functionality --------
+  const themeToggle = document.getElementById("themeToggle");
+
+  if (themeToggle) {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-theme");
+      themeToggle.textContent = "Light Mode";
+    } else {
+      themeToggle.textContent = "Dark Mode";
+    }
+
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-theme");
+      const isDark = document.body.classList.contains("dark-theme");
+
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
+    });
+  }
 });
+
 
   // -------- Hover effect (project image) --------
   const projectImg = document.querySelector("#projects img");
