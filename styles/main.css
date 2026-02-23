@@ -438,3 +438,35 @@ nav.custom-navbar {
   font-weight: 700;
   letter-spacing: 1px;
 }
+
+/* --- Theme Toggle Styles --- */
+/* Default (light) */
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --card: #ffffff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Apply to sections/cards if needed */
+section,
+.card,
+.section-content {
+  background: var(--card);
+}
+
+/* Dark Mode */
+body.dark-theme {
+  --bg: #0f172a;     
+  --text: #e5e7eb;   
+  --card: #111827;   
+}
+
+body.dark-theme nav.custom-navbar {
+  background-color: #0b2e22; /* darker forest green */
+}
