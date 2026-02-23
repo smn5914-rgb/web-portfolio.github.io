@@ -86,7 +86,29 @@ document.addEventListener("DOMContentLoaded", () => {
       status.style.color = "green";
       form.reset();
     }); 
-  } 
+  }
+
+  // -------- Character Counter --------
+const messageBox = form?.elements["message"];
+const charCount = document.getElementById("charCount");
+
+if (messageBox && charCount) {
+  const max = messageBox.maxLength || 500;
+
+  const updateCount = () => {
+    const current = messageBox.value.length;
+    charCount.textContent = `${current}/${max}`;
+
+    if (current >= max - 50) {
+      charCount.classList.add("char-warning");
+    } else {
+      charCount.classList.remove("char-warning");
+    }
+  };
+
+  updateCount();
+  messageBox.addEventListener("input", updateCount);
+}
 
   // --------Bootstrap Validation--------
   (() => {
