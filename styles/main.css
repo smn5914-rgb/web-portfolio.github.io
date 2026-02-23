@@ -470,3 +470,54 @@ body.dark-theme {
 body.dark-theme nav.custom-navbar {
   background-color: #0b2e22; /* darker forest green */
 }
+
+/* Dark Mode Contrast Fixes */  
+
+/* Make sure text defaults to the light color in dark mode */
+body.dark-theme,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p,
+body.dark-theme li,
+body.dark-theme label,
+body.dark-theme legend,
+body.dark-theme small {
+  color: var(--text);
+}
+
+/* Force common "card/box" areas to use the dark card color */
+body.dark-theme .card,
+body.dark-theme .section-content,
+body.dark-theme .project-card,
+body.dark-theme .education-card,
+body.dark-theme .quick-facts,
+body.dark-theme .quick-facts-card,
+body.dark-theme .about-card,
+body.dark-theme .content-card {
+  background: var(--card) !important;
+  color: var(--text) !important;
+}
+
+/* muted text */
+body.dark-theme .text-muted,
+body.dark-theme .muted {
+  color: rgba(229, 231, 235, 0.75) !important;
+}
+
+/* Links */
+body.dark-theme a {
+  color: rgba(147, 197, 253, 0.95);
+}
+body.dark-theme a:hover {
+  color: #ffffff;
+}
+
+/* Form inputs */
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+  background: #0b1220;
+  color: var(--text);
+  border-color: rgba(255,255,255,0.2);
+}
